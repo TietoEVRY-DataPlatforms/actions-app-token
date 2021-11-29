@@ -16,4 +16,4 @@ branding:
   icon: "unlock"
 runs:
   using: "docker"
-  image: "docker://gchr.io/tietoevry-dataplatforms/actions-gh-token"
+  image: "docker://ghcr.io/tietoevry-dataplatforms/actions-app-token:94cfb8a"
