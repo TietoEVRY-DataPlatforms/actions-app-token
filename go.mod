@@ -7,7 +7,7 @@ require (
 	github.com/bradleyfalzon/ghinstallation v1.1.1
 	github.com/google/go-github v17.0.0+incompatible
 	github.com/spf13/pflag v1.0.5
-	go.uber.org/zap v1.19.1
+	go.uber.org/zap v1.23.0
 )
 
 require (
