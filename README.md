@@ -1,4 +1,4 @@
-![Actions Status](https://github.com/tietoevry-dataplatforms/actions-app-token/workflows/Tests/badge.svg)
+![Actions Status](https://github.com/tietoevry-dataplatforms/actions-app-token/actions/workflows/ci.yaml/badge.svg)
 
 # Impersonate Your GitHub App In A GitHub Action
 
