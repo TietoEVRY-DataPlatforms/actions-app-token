@@ -1,6 +1,6 @@
 module github.com/tietoevry-dataplatforms/actions-gh-token
 
-go 1.17
+go 1.19
 
 require (
 	github.com/bitnami-labs/pflagenv v0.1.0
