@@ -42,8 +42,15 @@ func addMask(name string) {
 	fmt.Printf("::add-mask::%s\n", name)
 }
 
-func setOutput(k string, v string) {
-	fmt.Printf("::set-output name=%s::%s\n", k, v)
+func setOutput(k string, v string, o string) {
+	f, err := os.Open(o)
+	if err != nil {
+		zap.S().Fatal(err)
+	}
+	defer f.Close()
+	if _, err := f.WriteString(fmt.Sprintf("{%s}={%s}\n", k, v)); err != nil {
+		zap.S().Fatal(err)
+	}
 }
 
 func main() {
@@ -101,6 +108,7 @@ func main() {
 		zap.S().Panic(err)
 	}
 
+	ghOutput := os.Getenv("GITHUB_OUTPUT")
 	addMask(token)
-	setOutput("app_token", token)
+	setOutput("app_token", token, ghOutput)
 }
