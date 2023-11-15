@@ -109,6 +109,27 @@ func main() {
 	}
 
 	ghOutput := os.Getenv("GITHUB_OUTPUT")
+
+	_, err2 := os.Stat(ghOutput)
+	if err2 != nil {
+		fmt.Println("File Path does not exist!", err2)
+	}
+
+	_, err3 := os.Stat("/home/runner/work")
+	if err3 != nil {
+		fmt.Println("work path does not exist!", err3)
+	}
+
+	_, err4 := os.Stat("/home/runner/work/_temp")
+	if err4 != nil {
+		fmt.Println("temp Path does not exist!", err4)
+	}
+
+	_, err5 := os.Stat("/home/runner/work/_temp/_runner_file_commands")
+	if err5 != nil {
+		fmt.Println("filecommenads Path does not exist!", err5)
+	}
+
 	zap.S().Info("Got output: " + ghOutput)
 	addMask(token)
 	setOutput("app_token", token, ghOutput)
