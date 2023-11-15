@@ -43,7 +43,7 @@ func addMask(name string) {
 }
 
 func setOutput(k string, v string, o string) {
-	f, err := os.Open(o)
+	f, err := os.OpenFile(o, os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
 	if err != nil {
 		zap.S().Fatal(err)
 	}
