@@ -48,7 +48,7 @@ func setOutput(k string, v string, o string) {
 		zap.S().Fatal(err)
 	}
 	defer f.Close()
-	if _, err := f.WriteString(fmt.Sprintf("{%s}={%s}\n", k, v)); err != nil {
+	if _, err := f.WriteString(fmt.Sprintf("%s=%s\n", k, v)); err != nil {
 		zap.S().Fatal(err)
 	}
 }
