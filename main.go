@@ -109,6 +109,7 @@ func main() {
 	}
 
 	ghOutput := os.Getenv("GITHUB_OUTPUT")
+	zap.S().Info("Got output: " + ghOutput)
 	addMask(token)
 	setOutput("app_token", token, ghOutput)
 }
