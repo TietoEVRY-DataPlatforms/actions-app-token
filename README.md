@@ -25,7 +25,7 @@ Example:
 steps:
 - name: Get token
   id: get_token
-  uses: tietoevry-dataplatforms/actions-app-token@master
+  uses: tietoevry-dataplatforms/actions-app-token@main
   with:
     APP_PEM: ${{ secrets.APP_PEM }}
     APP_ID: ${{ secrets.APP_ID }}
