@@ -15,7 +15,6 @@ require (
 	github.com/google/go-cmp v0.5.6 // indirect
 	github.com/google/go-github/v29 v29.0.3 // indirect
 	github.com/google/go-querystring v1.1.0 // indirect
-	go.uber.org/atomic v1.11.0 // indirect
 	go.uber.org/multierr v1.11.0 // indirect
-	golang.org/x/crypto v0.15.0 // indirect
+	golang.org/x/crypto v0.17.0 // indirect
 )
